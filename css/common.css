@@ -24,8 +24,16 @@
   /* Hero block */
   --hero-color: #2f303a;
 
+  /* Advantages card */
+  --background-icon: #f5f4fa;
+
   /* Our team */
   --background-team: #f5f4fa;
+  --color-icon: #afb1b8;
+  --hover-icon: #ffffff;
+
+  /* Regular customers */
+  --border-color: #afb1b8;
 
   /* Card team*/
   --background-card-team: #ffffff;
@@ -35,6 +43,9 @@
 
   /* Footer block */
   --footer-color: #2f303a;
+  --join-text-color: #ffffff;
+  --join-icon-color: #ffffff;
+  --background-social-link: rgba(255, 255, 255, 0.1);
 
   /* Card set gap */
   --card-set-gap: 30px;
@@ -73,6 +84,7 @@ h6,
 ul,
 p {
   margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -160,7 +172,8 @@ p {
 }
 
 .address-list-item {
-  margin-right: 50px;
+  margin-right: 30px;
+  display: flex;
 
   /* outline: 1px solid blueviolet; */
 }
@@ -180,6 +193,9 @@ p {
 
 /* Contacts header */
 .contacts-header {
+  display: inline-flex;
+  align-items: center;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.15;
@@ -191,6 +207,11 @@ p {
 .contacts-header:hover,
 .contacts-header:focus {
   color: var(--hover-color);
+}
+
+.header-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 /* Main */
@@ -234,6 +255,15 @@ p {
   padding-bottom: 60px;
 }
 
+.footer-flex-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address-wrapper {
+  margin-right: 70px;
+}
+
 .main-footer .logo {
   display: inline-block;
   margin-right: 0;
@@ -273,4 +303,51 @@ p {
   letter-spacing: 0.03em;
 
   color: var(--contacts-footer-color);
+}
+
+.footer-join-wrapper {
+}
+
+.join-text {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--join-text-color);
+}
+
+.join-icons-list {
+  display: flex;
+}
+
+.join-item {
+  margin-right: 10px;
+}
+
+.join-item:last-child {
+  margin-right: 0;
+}
+
+.join-social-link {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--background-social-link);
+  color: var(--join-icon-color);
+}
+
+.join-social-link:hover,
+.join-social-link:focus {
+  background-color: var(--hover-color);
+}
+
+.social-icon {
+  fill: currentColor;
 }
